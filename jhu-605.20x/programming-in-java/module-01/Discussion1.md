@@ -41,7 +41,7 @@ Below is a copy of the pseudo-code I would use to develop a program to solve the
 ```js
 // The below pseudo-solution assumes pure functional programming and synchronous execution in any generic programming language.
 // author: Justin Law
-  
+
 extrapolateUSPopulation()
 {
 int daysPerYear = 365 // days per year assumption
@@ -49,17 +49,17 @@ int population = 312032543 // population assumption
 
 print(`Assuming the starting population is ${population}, and there are ${daysPerYear} days/year...`) // starting assumptions are displayed
 
-// _ 60 _ 60 _ 24 _ daysPerYear _ 5 is used to scale up to a 5 year time span
-int birthRate = 7 _ 60 _ 60 _ 24 _ daysPerYear _ 5 // default if user provides bad input
-int deathRate = -13 _ 60 _ 60 _ 24 _ daysPerYear _ 5 // default if user provides bad input, negative due to deaths
-int immigrationRate = 45 _ 60 _ 60 _ 24 _ daysPerYear _ 5 // default if user provides bad input
+// * 60 * 60 * 24 * daysPerYear * 5 is used to scale up to a 5 year time span
+int birthRate = 7 * 60 * 60 * 24 * daysPerYear * 5 // default if user provides bad input
+int deathRate = -13 * 60 * 60 * 24 * daysPerYear * 5 // default if user provides bad input, negative due to deaths
+int immigrationRate = 45 * 60 * 60 * 24 * daysPerYear * 5 // default if user provides bad input
 
 grabUserInput()
 {
-// _ 60 _ 60 _ 24 _ daysPerYear _ 5 is used to scale up to a 5 year time span
-birthRate = askUserForBirths() _ 60 _ 60 _ 24 _ daysPerYear _ 5
-deathRate = askUserForDeaths() _ 60 _ 60 _ 24 _ daysPerYear _ 5
-migrationRate = askUserForImmigrationRate() _ 60 _ 60 _ 24 _ daysPerYear _ 5
+// * 60 * 60 * 24 * daysPerYear * 5 is used to scale up to a 5 year time span
+birthRate = askUserForBirths() * 60 * 60 * 24 * daysPerYear * 5
+deathRate = askUserForDeaths() * 60 * 60 * 24 * daysPerYear * 5
+migrationRate = askUserForImmigrationRate() * 60 * 60 * 24 * daysPerYear * 5
 }
 
 grabUserInput(); // call the grabUserInput function to prompt user for inputs at the start of the program
