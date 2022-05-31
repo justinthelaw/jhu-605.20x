@@ -38,14 +38,10 @@ There may be solutions that calculate each of the \*\*/second and sum it to the 
 
 Below is a copy of the pseudo-code I would use to develop a program to solve the problem.
 
-## <code>
-
-/\*
-
-- The below pseudo-solution assumes pure functional programming and synchronous execution in any generic programming language.
-- author: Justin Law
-  \*/
-
+```js
+// The below pseudo-solution assumes pure functional programming and synchronous execution in any generic programming language.
+// author: Justin Law
+  
 extrapolateUSPopulation()
 {
 int daysPerYear = 365 // days per year assumption
@@ -75,9 +71,6 @@ print(`If births are ${birthRate}/second, deaths are ${deathRate}/second, and im
 }
 
 extrapolateUserInput(); // call the function when program begins
-
----
-
-</code>
+```
 
 If you have any questions or concerns, please reply below! I would love to know if I missed anything while thinking through the problem or writing the psuedo-code. Thank you!
