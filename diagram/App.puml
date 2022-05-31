@@ -1,0 +1,9 @@
+@startuml App
+left to right direction
+scale 2
+actor Justin
+actor World
+
+Justin -> World: Hello
+
+@enduml
