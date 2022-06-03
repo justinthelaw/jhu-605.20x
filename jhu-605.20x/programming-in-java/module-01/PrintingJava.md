@@ -13,7 +13,7 @@ No diagram will be used due to lack of necessary interface(s) or producer-consum
 - The example output can be created using a series of `System.out.print` or `System.out.println`
 - The example output can be manually created, or procedurally created so that the same can be done with any word
 - The example output is of a console height of 4 lines and width of at least 29 characters
-- The example output has one whitespace between the J's at the bottom of "J" in "JAVA"
+- The example output has 2 whitespaces between the J's at the bottom of "J" in "JAVA"
 - The example output whitespaces can also be generated using the escape chaarcter for a tab, `\t`
 
 #### Solution

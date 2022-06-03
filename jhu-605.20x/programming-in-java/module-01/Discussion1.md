@@ -1,3 +1,18 @@
+# Original Topic
+For this week's discussion, please respond to the following exercise:
+
+The U.S. Census Bureau projects population based on the following assumptions:
+
+There is one birth every 7 seconds
+There is one death every 13 seconds
+There is one new immigrant every 45 seconds
+Using program design language, write an algorithm that a program can use to calculate and display the population for each of the next five years. You must post your solution in the discussion topic thread. Do not write actual code for this assignment.
+
+You may assume that the current population is 312,032,543 and that a year has 365 days. Your algorithm must prompt users for the current population, and the birth, death, and immigration rates. Use Java comments to annotate your algorithm.
+
+Please be sure to read the tutorial on problem solving before attempting this exercise.
+
+# Response
 # Thought Process
 
 I will try approaching this using the question method outlined in the Problem Solving text.
