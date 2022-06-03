@@ -11,6 +11,6 @@ Having experience using these operators in JS/TS mainly, below is a list of thin
     - Instead of `x = x + 1` it is now `x += 1`, which is easier to read and understand, abstracting away a reassignment or understanding mistake
 - Chaining short hand notations could lead to third-party programmer misunderstanding
     - If more than a couple of short hand notations are used, then the order of precedence (order of operations) and character-overload (lots of signs) can be confusing to a reviewer
+    - Using the basic arithmetic for larger formulas or operations may be easier/quicker to understand to a third-party programmer
 
-Using the basic arithmetic for larger formulas or operations may be easier/quicker to understand to a third-party programmer
 These are the main advantages and disadvantages of the two operators from my perspective. Please let me know if I am missing anything or you disagree!
