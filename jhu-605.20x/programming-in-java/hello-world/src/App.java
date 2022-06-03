@@ -3,4 +3,4 @@ public class App {
         System.out.println("Hello, World!");
         System.out.println("HELLO\nWORLD!");
     }
-}
+} // testing the compiling and oop features of Java before class starts
