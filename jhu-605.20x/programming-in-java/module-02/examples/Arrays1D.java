@@ -1,4 +1,4 @@
-public class Arrays {
+public class Arrays1D {
   public static void main(String[] args) {
     String[] months = new String[12];
     int[] monthDays = new int[12];
