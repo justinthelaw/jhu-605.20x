@@ -54,4 +54,4 @@ public class MatrixSums
       System.out.println("Total" + "\t" + columnTotal1 + "\t" + columnTotal2 + "\t" + columnTotal3);
       System.out.println("\n\n");
    } // end main()
-} //  end class Original
+} //  end class MatrixSums
