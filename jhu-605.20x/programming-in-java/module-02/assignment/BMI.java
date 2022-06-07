@@ -36,7 +36,7 @@ public class BMI
       double heightMeters = heightInches * INCHES_TO_METERS;
 
       // perform BMI calculation, using Math.pow instead of num * num
-      // If dividing by 0, default to negative to get "Undefined" BMI classification
+      // If dividing by 0, default to negative to get "Undefined" BMI classification to avoid errors
       double resultBMI = weightKilograms != 0 ? (weightKilograms / Math.pow(heightMeters, 2)) : -1;
 
       // classify BMI using IF-statements

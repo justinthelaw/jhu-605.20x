@@ -4,8 +4,6 @@
 *  class: EN.605.201.82.SU22
 */
 
-package test;
-
 import java.util.Scanner;
 
 // Class which inputs and outputs some ints
@@ -31,6 +29,7 @@ public class MatrixSums
       v4 = input.nextInt(); // Input fourth value
       v5 = input.nextInt(); // Input fifth value
       v6 = input.nextInt(); // Input sixth value
+      input.close();
 
       // assignment addition of initialized integers for row sums:
       int rowTotal1 = v1 + v2;
