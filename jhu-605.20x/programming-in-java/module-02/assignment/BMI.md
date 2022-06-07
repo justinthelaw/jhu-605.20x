@@ -14,7 +14,7 @@ No diagram was produced due to a lack of complexity in the interfaces and produc
 The problem at hand does not have a required format, only that the program properly receives user-provided values of weight and height and outputs a BMI and classification to the user. That being said, the implementation output in my program will display the following in response to user-input:
 - The original height converted to meters
 - The original weight converted to kilograms
-- The calculation being performed (weight / sqrt(height))
+- The calculation being performed (weight / height^2)
 - The final resulting BMI and classification
 
 #### Assumptions
@@ -22,7 +22,7 @@ The problem at hand does not have a required format, only that the program prope
 - The user will input their height in inches and weight in pounds as no larger than a number of ###.## size (Java float)
 - The conversion factors and BMI calculation will be performed in Java double precision
   - Casting the original user-input of a Java float to a Java double will be required
-- The user-provided input values are never input incorrectly, to include the following possible mistakes:
+- The user-provided input values are usually not input incorrectly, to include the following possible mistakes:
     - Not entering a values within the range of a Java float
     - Entering values of different types
     - Not entering values at all
