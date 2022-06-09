@@ -5,11 +5,63 @@ In the Discussion board for this module, post a brief description of a problem (
 After you have posted your problem and Java solution, post a reply to another student’s problem and code a different solution using different Java control constructs and/or a different arrangement of Java control constructs studied in this module. At the bottom of your reply, write a brief paragraph declaring which solution is better and why.
 
 # Response
-A device that tries to move forward, left, or right based on whether there is an obstacle in the way. The goal is to run through a corridor without running into any obstacles. The assumption is there is no instance where the device runs into a 3-sided wall that would prevent it from dodging to the left or right.
+
+A device that tries to move forward, (lateral) left, or (lateral) right based on whether there is an obstacle in the way. The goal is to run through a corridor without running into any obstacles.
+
+Some assumptions and ground rules include:
+
+- The course consists of a white ground, and black obstacles
+- The race is started by a green light indicator
+- There is no instance where the device runs into a 3-sided wall that would prevent it from dodging to the left or right
+- The device can see far enough ahead to make a decision 1-step ahead of time
+- At the end, there is a red stopping line
 
 ```java
+    public class Device {
+    // device statuses and current state
+    private static final String[] STATUS = { "off", "standby", "on"}; // immutable
+    String currentStatus = STATUS[0]; // default state is off mode, changed by user
 
+    public static void main(String [] args) {
+        // once device status is on or standby, begin to constantly scan and move
+        while (currentStatus == STATUS[1] || currentStatus == STATUS[2]) {
+            scanAndMove();
+        }
+    } // end main
 
+    // all checkFor functions scan forward, left, and right
+    // assumes checkFor is implemented by some sort of computer vision library, returns true or false
+    // assumes move[direction]OneStep is implemented by some sort of motor library
+    private static void scanAndMove() {
+        if (currentStatus == STATUS[1]) {
+            if (checkForGreen()) {
+                moveForwardOneStep();
+                currentStatus == STATUS[2];
+            }
+            scanAndMove(); // continue to loop on scanAndMove (recursive)
+        } else if (currentStatus == "on") {
+            if (checkForRed()) {
+                currentStatus = STATUS[0];
+                return; // exit recursive function
+            } else if (checkForBlack("forward")) {
+                // if forward is blocked, check right
+                if (checkForBlack("right")) {
+                    // if right is blocked, move right and recurse
+                    moveLeftOneStep();
+                    scanAndMove();
+                } else {
+                    // if left and forward are blocked, move right and recurse
+                    moveRightOneStep();
+                    scanAndMove();
+                }
+            } else {
+                // if no blockers exist, move forward and recurse
+                moveForwardOneStep();
+                scanAndMove();
+            }
+        }
+    } // end scanAndMove
+} // end Device class
 ```
 
 # Response to Timothy Grovenburg
