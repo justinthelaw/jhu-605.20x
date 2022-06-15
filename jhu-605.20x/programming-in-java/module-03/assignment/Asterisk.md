@@ -57,4 +57,4 @@ Refer to `./Asterisk.java` for program. See the code block below (if this is the
 # Implementation Output
 Below is an output in the VSCode Integrated Terminal.
 
-<img src="./Asterisk-Completed.png" alt="./Asterisk-Completed.PNG">
+<img src="./Asterisk-Completed.PNG" alt="./Asterisk-Completed.PNG">

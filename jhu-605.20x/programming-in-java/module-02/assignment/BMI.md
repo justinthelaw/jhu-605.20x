@@ -41,4 +41,4 @@ Refer to `./BMI.java` for program. See the code block below (if this is the PDF 
 # Implementation Output
 Below is an output in the VSCode Integrated Terminal.
 
-<img src="./BMI-Completed.png" alt="./BMI-Completed.PNG">
+<img src="./BMI-Completed.PNG" alt="./BMI-Completed.PNG">
