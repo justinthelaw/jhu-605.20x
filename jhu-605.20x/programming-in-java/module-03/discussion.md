@@ -20,7 +20,7 @@ Some assumptions and ground rules include:
     public class Device {
     // device statuses and current state
     private static final String[] STATUS = { "off", "standby", "on"}; // immutable
-    String currentStatus = STATUS[0]; // default state is off mode, changed by user
+    private String currentStatus = STATUS[0]; // default state is off mode, changed by user
 
     public static void main(String [] args) {
         // once device status is on or standby, begin to constantly scan and move
@@ -36,7 +36,7 @@ Some assumptions and ground rules include:
         if (currentStatus == STATUS[1]) {
             if (checkForGreen()) {
                 moveForwardOneStep();
-                currentStatus == STATUS[2];
+                currentStatus = STATUS[2];
             }
             scanAndMove(); // continue to loop on scanAndMove (recursive)
         } else if (currentStatus == "on") {
