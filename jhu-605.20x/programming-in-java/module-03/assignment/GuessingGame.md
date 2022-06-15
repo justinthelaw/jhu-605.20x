@@ -17,7 +17,7 @@ number between 1 and n, the following formula may be used:
 #### Discussion
 Below is a diagram of the use case and expected behaviour of GuessingGame.java generated using PlantUML, the problem statement givens, and the assumptions listed below the diagram. See the [PlantUML](#PlantUML) section
 
-<img src="./GuessingGame-Diagram.PNG" alt="./GuessingGame-Diagram.png">
+<img src="./GuessingGame-Diagram.png" alt="./GuessingGame-Diagram.png">
 
 #### Assumptions
 - Handling and checking of the user input can be done in any manner
@@ -34,7 +34,7 @@ Refer to `./Asterisk.java` for program. See the code block below (if this is the
 # Implementation Output
 Below is an output in the VSCode Integrated Terminal.
 
-<img src="./GuessingGame-Completed.PNG" alt="./GuessingGame-Completed.png">
+<img src="./GuessingGame-Completed.png" alt="./GuessingGame-Completed.png">
 
 # PlantUML
 ```
