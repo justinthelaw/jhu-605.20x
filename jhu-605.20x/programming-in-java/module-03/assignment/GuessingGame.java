@@ -6,8 +6,8 @@
 
 import java.util.Scanner;
 
-// Class which recieves max number of guesses and max number and
-// initiaites a guess game with guidance towards the correct answer
+// Class which receives max number of guesses and max number and
+// initiatives a guess game with guidance towards the correct answer
 public class GuessingGame {
    public static void main(String[] args) {
 
@@ -24,14 +24,14 @@ public class GuessingGame {
          // current guess attempts
          int currentAttempts = 0;
          // initialize guess variable
-         int guess = 1;
+         int guess = 0;
 
          // add space before game initialization inputs
          System.out.println();
          // All scanners stay "open" until program ends
          // Use a Scanner to get user-provided max number
          Scanner inputNumber = new Scanner(System.in);
-         System.out.print("Maximum possible number: ");
+         System.out.print("Maximum possible number (greater than 1): ");
          maxNumber = inputNumber.nextInt();
          // Use a Scanner to get user-provided max guesses
          Scanner inputGuesses = new Scanner(System.in);
@@ -41,7 +41,13 @@ public class GuessingGame {
          // generate random number
          int randomNumber = (int) (maxNumber * Math.random()) + 1;
 
-         while (guess != randomNumber && gameState == 1)
+         // catch case of max number 1 equals default guess of 1
+         if (maxNumber == randomNumber && maxNumber == 1)
+         {
+            System.out.println("The maximum possible number must be greater than 1. Please try again!");
+         }
+
+         while (guess != randomNumber && maxNumber > 1)
          {
             // add space before guess prompts loop
             System.out.println();
@@ -60,6 +66,7 @@ public class GuessingGame {
                { // don't change game state and continue game
                   gameState = 0;
                   System.out.println("\nThanks for playing! Goodbye :)");
+                  break;
                }
             }
             else
@@ -83,7 +90,9 @@ public class GuessingGame {
                   int playerChoice = choice.nextInt();
                   if (playerChoice != 1)
                   {
+                     gameState = 0;
                      System.out.println("\nThanks for playing! Goodbye :)");
+                     break;
                   }
                }
             }
