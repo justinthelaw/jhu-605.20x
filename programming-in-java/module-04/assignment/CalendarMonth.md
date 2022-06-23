@@ -17,6 +17,7 @@ The program must use the following methods:
 | `boolean isLeapYear(int year)`                 | Returns true if the specified year is a leap year, and returns false otherwise.                      |
 
 Here is a version of Zeller's algorithm you can use: https://codereview.stackexchange.com/questions/67722/its-friday-zellers-congruence-revisited
+See [getStartDay.java](./getStartDay.java)
 
 # Thought Process
 
