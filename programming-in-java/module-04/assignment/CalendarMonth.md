@@ -55,3 +55,15 @@ Refer to `./CalendarMonth.java` for program. See the code block below (if this i
 Below is an output in the VSCode Integrated Terminal.
 
 <img src="./CalendarMonth-Completed.png" alt="./CalendarMonth-Completed.PNG">
+
+---
+
+# Extra Assignment
+
+# Instructions
+Recapitalizing/refactoring the above, write a program that prompts the user to specify a year (e.g.  2012) and then displays a calendar for each month in that year.  You must reuse the methods from part one.
+# Thought Process
+The same assumptions and discussion points from Assignment #4.1 still apply to this problem. The main implementation difference for this program is the following:
+- The user input is now limited to one integer greater than 0, for the year
+- The output to console is now a printing of every month for that year
+- There will likely need to be for-loop that loops through each of the 12 months and all of the methods to print them to console
