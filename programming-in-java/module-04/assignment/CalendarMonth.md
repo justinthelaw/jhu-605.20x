@@ -85,4 +85,6 @@ Refer to `./CalendarYear.java` for program. See the code block below (if this is
 
 Below is an output in the VSCode Integrated Terminal.
 
-<img src="./CalendarYear-Completed.png" alt="./CalendarYear-Completed.PNG">
+<img src="./CalendarYear-Completed-1.png" alt="./CalendarYear-Completed-1.PNG">
+<img src="./CalendarYear-Completed-2.png" alt="./CalendarYear-Completed-2.PNG">
+<img src="./CalendarYear-Completed-3.png" alt="./CalendarYear-Completed-3.PNG">
