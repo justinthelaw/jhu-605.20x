@@ -30,6 +30,8 @@ See [getStartDay.java](./getStartDay.java)
     - An exception is that the Map will have to have 13 key-value pairs to handle February leap year days
 - Printing the body using the number of days in the month and starting day of the week will require some checking and for-loop logic
     - Every time the month day number hits the last day of the week, Sunday (7), there must be a new line to start the next week and continue
+- Checking for leap years is done using the page linked in the Zeller's Algorithm page linked above
+    - https://codereview.stackexchange.com/questions/65221/function-for-checking-leap-years
 
 #### Assumptions
 
@@ -54,16 +56,33 @@ Refer to `./CalendarMonth.java` for program. See the code block below (if this i
 
 Below is an output in the VSCode Integrated Terminal.
 
-<img src="./CalendarMonth-Completed.png" alt="./CalendarMonth-Completed.PNG">
+<img src="./CalendarMonth-Completed-1.png" alt="./CalendarMonth-Completed-1.PNG">
+<img src="./CalendarMonth-Completed-2.png" alt="./CalendarMonth-Completed-2.PNG">
 
 ---
 
 # Extra Assignment
 
-# Instructions
+## Instructions
 Recapitalizing/refactoring the above, write a program that prompts the user to specify a year (e.g.  2012) and then displays a calendar for each month in that year.  You must reuse the methods from part one.
-# Thought Process
+## Thought Process
 The same assumptions and discussion points from Assignment #4.1 still apply to this problem. The main implementation difference for this program is the following:
 - The user input is now limited to one integer greater than 0, for the year
 - The output to console is now a printing of every month for that year
 - There will likely need to be for-loop that loops through each of the 12 months and all of the methods to print them to console
+
+## Implementation Code
+
+The program was written in VSCode on WSL 2, Ubuntu 20.04.4 LTS.
+
+Refer to `./CalendarYear.java` for program. See the code block below (if this is the PDF submission).
+
+```java
+// code block goes here for the actual PDF submission
+```
+
+## Implementation Output
+
+Below is an output in the VSCode Integrated Terminal.
+
+<img src="./CalendarYear-Completed.png" alt="./CalendarYear-Completed.PNG">
