@@ -16,18 +16,21 @@ public class MorseCodeTranslator {
 
    // initialize array for storing Morse Code
    private static final String[] MORSE_CODE = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
-         "-.-", ".-..", "--", "--", ".-", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-",
-         "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----" };
+         "-.-", ".-..", "--", ".-", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-",
+         "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----", "|" };
    // initialize array for storing English characters and digits
    private static final String[] ENGLISH = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O",
-         "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+         "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", " " };
 
    public static void main(String[] args) {
-      // start by getting user choice and input for Morse Code or English
+      // start by getting user choice for Morse Code or English and input
       getUserInput();
-
-      System.out.println(translationType);
-      System.out.println(translationInput);
+      // translate based on user choice
+      if (translationType == 1) {
+         translateToEnglish();
+      } else {
+         translateToMorseCode();
+      }
    } // end main method
 
    // getUserInput is a method that has user choose Morse Code or English input
@@ -36,7 +39,7 @@ public class MorseCodeTranslator {
       Scanner choiceInput = new Scanner(System.in);
       // keep asking user until a valid input is provided
       while ((translationType != 1) && (translationType != 2)) {
-         System.out.print("\nPick a translation type:\n(1) Morse Code -> English\n(2) English to Morse Code\nChoice: ");
+         System.out.print("\nPick a translation type:\n(1) Morse Code -> English\n(2) English -> Morse Code\nChoice: ");
          translationType = choiceInput.nextInt();
       }
       // user Scanner util, grab user input
@@ -51,5 +54,46 @@ public class MorseCodeTranslator {
       choiceInput.close();
    } // end getUserInput method
 
+   // method that takes the Morse code user input and translates to English
+   private static void translateToEnglish() {
+
+   }
+
+   // method that takes the English user input and translates to Morse code
+   private static void translateToMorseCode() {
+      // initialize variable to store current character
+      String character = "";
+      // initialize variable to store resulting Morse code
+      String result = "";
+      // for loop to walk through English string
+      for (int i = 0; i < translationInput.length(); i++) {
+         // assign substring at index to character
+         character = translationInput.substring(i, i + 1);
+         // find the index of the character in the ENGLISH array
+         int characterIndex = linearIndexSearch(ENGLISH, character);
+         // check for corresponding Morse code
+         // if character doesn't exist in either array, skip over it
+         // e.g. all punctuation gets skipped over
+         result += characterIndex != -1 ? MORSE_CODE[characterIndex] : "";
+         result += characterIndex != -1 ? " " : "";
+      }
+      // print out trimmed (no whitespace at beginning or end) result
+      System.out.println("\nMorse Code Output: " + result.trim() + "\n");
+   }
+
+   // method that looks for the index of a matching element in an array
+   private static int linearIndexSearch(String[] array, String character) {
+      // default is no element can be found
+      int index = -1;
+      // loop over array and look for character
+      for (int j = 0; j < array.length; j ++) {
+         // transform character to upper case for ENGLISH array
+         // matching requires standardization to upper case
+         if (ENGLISH[j].equals(character.toUpperCase())) {
+            index = j;
+         }
+      }
+      return index;
+   }
 
 } // end MorseCodeTranslator class
