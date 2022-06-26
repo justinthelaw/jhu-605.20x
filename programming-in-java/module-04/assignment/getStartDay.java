@@ -22,26 +22,26 @@
     * @author: rolfl, modified by Josh Lafond
     */
 
-   public static int getStartDay(int month, int year) {
-      // Adjust month number & year to fit Zeller's numbering system
-      if (month < 3) {
-         month += 12;
-         year -= 1;
-      }
+   // public static int getStartDay(int month, int year) {
+   //    // Adjust month number & year to fit Zeller's numbering system
+   //    if (month < 3) {
+   //       month += 12;
+   //       year -= 1;
+   //    }
 
-      int centuryYear = year % 100;    // Calculate year within century
-      int centuryTerm = year / 100;    // Calculate century term
-      int firstDayInMonth = 0;         // Day number of first day in month 'm'
+   //    int centuryYear = year % 100;    // Calculate year within century
+   //    int centuryTerm = year / 100;    // Calculate century term
+   //    int firstDayInMonth = 0;         // Day number of first day in month 'm'
 
-      firstDayInMonth = (1 + // to shift index 0 to the 1-7 return range
-         (13 * (month + 1) / 5)
-         + centuryYear +
-         (centuryYear / 4) +
-         (centuryTerm / 4) +
-         (5 * centuryTerm)) % 7;
+   //    firstDayInMonth = (1 + // to shift index 0 to the 1-7 return range
+   //       (13 * (month + 1) / 5)
+   //       + centuryYear +
+   //       (centuryYear / 4) +
+   //       (centuryTerm / 4) +
+   //       (5 * centuryTerm)) % 7;
 
-      // Convert Zeller's value to ISO value (1 = Mon, ... , 7 = Sun )
-      int dayNum = ((firstDayInMonth + 5) % 7) + 1;
+   //    // Convert Zeller's value to ISO value (1 = Mon, ... , 7 = Sun )
+   //    int dayNum = ((firstDayInMonth + 5) % 7) + 1;
 
-      return dayNum;
-   } // end getStartDay()
+   //    return dayNum;
+   // } // end getStartDay()
