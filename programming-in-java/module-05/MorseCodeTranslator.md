@@ -45,5 +45,4 @@ Refer to `./MorseCodeTranslator.java` for program. See the code block below (if 
 
 Below is an output in the VSCode Integrated Terminal.
 
-<img src="./MorseCodeTranslator-Completed-1.png" alt="./MorseCodeTranslator-Completed-1.PNG">
-<img src="./MorseCodeTranslator-Completed-2.png" alt="./MorseCodeTranslator-Completed-2.PNG">
+<img src="./MorseCodeTranslator-Completed.png" alt="./MorseCodeTranslator-Completed.PNG">
