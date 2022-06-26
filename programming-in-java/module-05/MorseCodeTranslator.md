@@ -10,9 +10,14 @@ The international version of Morse code for alphabetic characters and digits is 
 
 #### Discussion
 
+- The program should first use a method to ask for the user's choice on what type of translation they are trying to perform
+- The second method will ask the user for input in accordance with the data entry rules from the problem statement
+- The final method will use the user's choice and input to cross-reference 2 arrays that store the Morse Code and English characters in a synchronized index order
 
 #### Assumptions
-
+- User input can be taken and checked in any way
+- User input for translation of Morse Code or English is a (1) or (2)
+- Punctuation and incorrect input (e.g. inputting Morse Code after choosing to translate from English to Morse Code) can be ignored
 
 # Implementation Code
 
