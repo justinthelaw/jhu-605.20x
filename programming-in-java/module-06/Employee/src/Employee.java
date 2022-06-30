@@ -1,6 +1,6 @@
 
 /**
- * This Employee class contains the get/set and format of the parameters name,
+ * This Employee class contains the set and format of the parameters name,
  * date, and address.
  *
  * @author Justin Law
@@ -9,8 +9,19 @@
 
 public class Employee {
 
-   public static void main(String[] args) {
+   public Name name;
+   public Address address;
+   public Date date;
 
-   } // end main method
+   // instantiation
+   Employee(String firstName, String lastName, String street, String city, String state, int zipCode, int month, int day, int year) {
+      this.name = new Name(firstName, lastName);
+      this.address = new Address(street, city, state, zipCode);
+      this.date = new Date(month, day, year);
+   } // end Employee
+
+   public String toString() {
+      return this.name.toString() + " | " + this.address.toString() + " | " + this.date.toString();
+   }
 
 } // end Employee class

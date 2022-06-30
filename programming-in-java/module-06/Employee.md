@@ -9,9 +9,11 @@ Your program should prompt the user to enter data for several employees, store t
 # Thought Process
 
 #### Assumptions
-- The user is allowed to enter an unlimited amount of Employee information in 1 program run
+- The user is only allowed to enter 100 entries of Employee information in 1 program run
 - The Employee class can contain other help methods besides the main method
-- There will not be a default initialization for any of the classes - correct information must be provided for each prompt
+- Information when instantiating all classes cannot be left blank (no overload cases)
+- Get methods are not required for classes, due to the function of only printing every employee after program gets all user input
+  - No get method is required by the problem statement when printing the final Employee array output
 - Name, Address, and Date are public classes that can be used elsewhere besides Employee
 - Date class only allows entry of numbers:
   - Month is 1-12
@@ -27,14 +29,16 @@ Your program should prompt the user to enter data for several employees, store t
   - First name is at least 1-char String
   - Last name is at least 1-char String
 - No editing of any data needs to be done once information has been entered the first time
+- Any errors in user data entry will throw an error and then default the information to the "alt" case
+  - No handling of errors or editing of data is required by problem statement
 
 #### Discussion
 - The Employee's main method class should contain functions that allow the user to continue to provide employee information until the user is satisfied/done
   - This will be implemented with a do-while loop, to allow a first run before asing for continuation
-- Data checking for all data input is done in the sub-classes' methods (Name, Address, Date) and called at the Employee class level as a static method
+- Data checking for all data input is done in the other class methods (Name, Address, Date)
 - Employee class instantiates each sub-class, and its methods and attributes, for every Employee entered by the user
-- Data input error messages will be System.out.println(), followed by a chance to enter the info again
-- An array of arrays will be used to store multiple Employee information
+- Data input error messages will be System.out.println(), followed by a message that a default value has been added instead
+- An array of Employees will be used to store multiple employee entries
 
 # Implementation Code
 
@@ -50,4 +54,5 @@ Refer to `./Employee.java` for program. See the code block below (if this is the
 
 Below is an output in the VSCode Integrated Terminal.
 
-<img src="./Employee-Completed.png" alt="./Employee-Completed.PNG">
+<img src="./Employee-Completed-1.png" alt="./Employee-Completed-1.PNG">
+<img src="./Employee-Completed-2.png" alt="./Employee-Completed-2.PNG">
