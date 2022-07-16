@@ -44,7 +44,7 @@ Your program should prompt the user to enter data for several employees, store t
 
 The program was written in VSCode on WSL 2, Ubuntu 20.04.4 LTS.
 
-Refer to `./Employee.java` for program. See the code block below (if this is the PDF submission).
+Refer to [./Employee/src](../module-06/Employee) for program. See the code block below (if this is the PDF submission).
 
 ```java
 // code block goes here for the actual PDF submission
