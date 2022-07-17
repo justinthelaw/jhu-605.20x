@@ -18,8 +18,9 @@ The test program should display all attributes for the three employees. To keep 
 - All [assumptions from Module-06 (Employee)](../module-06/Employee.md) are still relevant and correct
 - All [code from Module-06 (Employee)](../module-06/Employee/) is still relevant and correct
 - Editing or opportunities for a user to correct incorrect data entry are not required
-- Incorrect entires will lead to a default value as defined in each class
-- The test program must recieve input for and display (print) all module-06 Employee attributes alongside the newly instantiated SalariedEmployee and HourlyEmployee -unique attributes
+- Incorrect entries will lead to a default value as defined in each class
+- The test program must receive input for and display (print) all module-06 Employee attributes alongside the newly instantiated SalariedEmployee and HourlyEmployee -unique attributes
+- Earnings is a whole integer number, Overtime rates is a float (1.5f), Hours worked is a whole integer number
 
 ## Diagram
 
@@ -35,13 +36,17 @@ classDiagram
     Employee "1" ..> "1" Date : uses >
     Employee "1" ..> "1" Address : uses >
 
-    Employee: Name name
-    Employee: Date date
-    Employee: Address address
-
     class Employee{
         <<abstract>>
-        +toString() String
+        +Name name
+        +Date date
+        +Address address
+        +String paymentSchedule
+        +setName(firstName: String, lastName: String) void
+        +setAddress(street: String, city: String, state: String, zipCode: int) void
+        +setDate(month: int, day: int, year: int) void
+        +setPaySchedule(paymentSchedule: String) void
+        +setEarnings(earnings: int)* Boolean
     }
 
     class Name{
@@ -77,7 +82,6 @@ classDiagram
       +setCity(city: String) Boolean
       +setState(state: String) Boolean
       +setZipCode(zipCode: int) Boolean
-      +toString() String
     }
 
     %% Employee subclasses %%
@@ -85,18 +89,22 @@ classDiagram
     Employee "1" <|-- "*" HourlyEmployee
 
     class SalariedEmployee{
-      -int annualSalary
-      +setAnnualSalary(salary: int) Boolean
+      -int ALT_EARNINGS
+      -int earnings
+      +setEarnings(earnings: int) Boolean
       +toString() String
     }
 
     class HourlyEmployee{
-      -int hourlyPayRate
-      -int hoursWorked
+      -int ALT_EARNINGS
+      -int ALT_HOURS_WORKED
+      -float OVERTIME_RATE
       -int earnings
-      +setHourlyPayRate(hourlyPayRate: int) Boolean
-      +setHoursWorked(hoursWorked: int) Boolean
+      -int hoursWorked
+      -int compensation
       +setEarnings(earnings: int) Boolean
+      +setHoursWorked(hoursWorked: int) Boolean
+      +setCompensation(earnings: int, hoursWorked: int) Boolean
       +toString() String
     }
 ```

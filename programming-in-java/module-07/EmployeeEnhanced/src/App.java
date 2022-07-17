@@ -4,7 +4,7 @@
 *  Address classes to generate an array of Employees with information as inputted by the user.
 *
 *  @author Justin Law
-*  @version 1.0
+*  @version 1.1
 *  class: EN.605.201.82.SU22
 */
 
@@ -33,7 +33,10 @@ public class App {
                   + "\t- Year is 1900-2022\n" + "- Employee Address allows:\n" + "\t- Street is a String\n"
                   + "\t- City is a String\n" + "\t- State is 2 char String\n"
                   + "\t- Zip code is 5-digit int (no leading 0)\n" + "- Employee name allows:\n"
-                  + "\t- First name is at least 1-char String\n" + "\t- Last name is at least 1-char String\n");
+                  + "\t- First name is at least 1-char String\n" + "\t- Last name is at least 1-char String\n"
+                  + "- Employee payment plan allows:\n" + "\t- Salary\n" + "\t- Hourly\n"
+                  + "- Employee earnings allows:\n" + "\t- An integer greater than 0\n"
+                  + "- If Hourly, hours worked allows:\n" + "\t- An integer no greater than 168\n");
 
       // start by getting user input for Employee information
       getUserInput();
@@ -94,10 +97,13 @@ public class App {
       String street;
       String city;
       String state;
+      String paymentSchedule;
       int zipCode;
       int month;
       int day;
       int year;
+      int earnings;
+      int hoursWorked;
 
       // sequentially ask for each parameter
       System.out.print(startString + "first name: ");
@@ -118,9 +124,27 @@ public class App {
       day = userInput.nextInt();
       System.out.print(startString + "hire year: ");
       year = userInput.nextInt();
+      System.out.print(startString + "payment schedule: ");
+      paymentSchedule = userInput.nextLine();
+      // hourly employees vs salaried employee decision point
+      // hourly employees have an hours worked attribute
+      if (paymentSchedule.equals("Hourly")) {
+         System.out.print(startString + "hourly earnings: ");
+         earnings = userInput.nextInt();
+         System.out.print(startString + "hours worked: ");
+         hoursWorked = userInput.nextInt();
+         // instantiate an Employee with input parameters
+         // Employee type based on payment schedule
+         employees[counter] = new HourlyEmployee(firstName, lastName, street, city, state, zipCode, month, day, year, paymentSchedule, earnings, hoursWorked);
+      } else {
+         // defaults to Salary if incorrect input
+         paymentSchedule = "Salary";
+         System.out.print(startString + "annual earnings: ");
+         earnings = userInput.nextInt();
+         employees[counter] = new SalariedEmployee(firstName, lastName, street, city, state, zipCode, month, day, year, paymentSchedule, earnings);
+      }
 
-      // instantiate an Employee with input paramaters
-      employees[counter] = new Employee(firstName, lastName, street, city, state, zipCode, month, day, year);
+
    } // end getEmployeeInfo method
 
    /**

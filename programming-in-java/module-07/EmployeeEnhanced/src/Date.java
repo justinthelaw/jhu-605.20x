@@ -4,7 +4,8 @@
  * date
  *
  * @author Justin Law
- * @version 1.0 class: EN.605.201.82.SU22
+ * @version 1.1
+ * class: EN.605.201.82.SU22
  */
 
 public class Date {
