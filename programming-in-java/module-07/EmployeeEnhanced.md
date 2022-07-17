@@ -101,10 +101,10 @@ classDiagram
       -float OVERTIME_RATE
       -int earnings
       -int hoursWorked
-      -int compensation
+      -float compensation
       +setEarnings(earnings: int) Boolean
       +setHoursWorked(hoursWorked: int) Boolean
-      +setCompensation(earnings: int, hoursWorked: int) Boolean
+      +setCompensation(earnings: int, hoursWorked: int) void
       +toString() String
     }
 ```

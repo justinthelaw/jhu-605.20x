@@ -6,6 +6,7 @@ public class HourlyEmployee extends Employee {
 
   public int earnings;
   public int hoursWorked;
+  public float compensation;
 
   // instantiation of Hourly Employee
   HourlyEmployee(String firstName, String lastName, String street, String city, String state, int zipCode, int month,
@@ -17,11 +18,12 @@ public class HourlyEmployee extends Employee {
     if (!setEarnings(earnings)) {
       System.out.println("ERROR: Earnings must be greater than 0! Defaulting to alternative.");
     }
+    setCompensation(earnings, hoursWorked);
   }
 
   /**
    * The setEarnings method checks the arguments for range and then sets the
-   * earnings
+   * earnings, default Earnings is unique to Hourly Employee
    *
    * @param earnings
    */
@@ -37,13 +39,28 @@ public class HourlyEmployee extends Employee {
   } // end setEarnings
 
   /**
+   * The setCompensation method checks the arguments for range and then sets the
+   * compensation by multiplying the hours worked with earnings, and then overtime
+   *
+   * @param earnings
+   * @param hoursWorked
+   */
+  public void setCompensation(int earnings, int hoursWorked) {
+    // hours worked over 40 go at overtime rate
+    int regularHours = hoursWorked >= 40 ? 40 : hoursWorked;
+    int overtimeHours = hoursWorked >= 40 ? hoursWorked - 40 : 0;
+    float compensation = (float) (earnings * regularHours) + ((float) earnings * OVERTIME_RATE * (float) overtimeHours);
+    this.compensation = compensation;
+  } // end setEarnings
+
+  /**
    * The toString method returns the Salaried Employee string
    *
    * @return String
    */
   public String toString() {
     return this.name.toString() + " | " + this.address.toString() + " | " + this.date.toString()
-        + " | Payment Schedule: " + this.paymentSchedule + " | Salary: " + this.earnings;
+        + " | Payment Schedule: " + this.paymentSchedule + " | Hourly Rate: " + this.earnings + " | Hours Worked: " + this.hoursWorked + " | Compensation: " + this.compensation;
   } // end toString
 
 }

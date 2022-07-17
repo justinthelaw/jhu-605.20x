@@ -18,7 +18,7 @@ public class SalariedEmployee extends Employee {
 
   /**
    * The setEarnings method checks the arguments for range and then sets the
-   * earnings
+   * earnings, default Earnings is unique to Salaried Employee
    *
    * @param earnings
    */
