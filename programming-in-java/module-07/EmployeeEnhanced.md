@@ -134,5 +134,3 @@ Below is an output in the VSCode Integrated Terminal.
 <img src="./EmployeeEnhanced-Completed-1.png" alt="./EmployeeEnhanced-Completed-1.png">
 
 <img src="./EmployeeEnhanced-Completed-2.png" alt="./EmployeeEnhanced-Completed-2.png">
-
-<img src="./EmployeeEnhanced-Completed-3.png" alt="./EmployeeEnhanced-Completed-3.png">

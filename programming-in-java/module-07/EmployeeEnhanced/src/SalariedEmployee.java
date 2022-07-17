@@ -23,7 +23,7 @@ public class SalariedEmployee extends Employee {
    * @param earnings
    */
   public Boolean setEarnings(int earnings) {
-    // if bad year provided, go to "alt"
+    // if bad earnings provided, go to "alt"
     if (earnings > 0) {
       this.earnings = earnings;
       return true;

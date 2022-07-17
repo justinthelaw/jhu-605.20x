@@ -124,9 +124,10 @@ public class App {
       day = userInput.nextInt();
       System.out.print(startString + "hire year: ");
       year = userInput.nextInt();
+      // extra nextLine() to skip over space created by nextInt
+      userInput.nextLine();
       System.out.print(startString + "payment schedule: ");
       paymentSchedule = userInput.nextLine();
-      userInput.nextLine();
       // hourly employees vs salaried employee decision point
       // hourly employees have an hours worked attribute
       if (paymentSchedule.equals("Hourly")) {

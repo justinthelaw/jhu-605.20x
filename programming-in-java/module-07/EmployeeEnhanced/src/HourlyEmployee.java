@@ -18,6 +18,7 @@ public class HourlyEmployee extends Employee {
     if (!setEarnings(earnings)) {
       System.out.println("ERROR: Earnings must be greater than 0! Defaulting to alternative.");
     }
+    setHoursWorked(hoursWorked);
     setCompensation(earnings, hoursWorked);
   }
 
@@ -28,7 +29,7 @@ public class HourlyEmployee extends Employee {
    * @param earnings
    */
   public Boolean setEarnings(int earnings) {
-    // if bad year provided, go to "alt"
+    // if bad earnings provided, go to "alt"
     if (earnings > 0) {
       this.earnings = earnings;
       return true;
@@ -37,6 +38,23 @@ public class HourlyEmployee extends Employee {
       return false;
     }
   } // end setEarnings
+
+  /**
+   * The setHours method checks the arguments for range and then sets the
+   * hours worked
+   *
+   * @param hoursWorked
+   */
+  public Boolean setHoursWorked(int hoursWorked) {
+    // if bad hours worked provided, go to "alt"
+    if (hoursWorked > 0) {
+      this.hoursWorked = hoursWorked;
+      return true;
+    } else {
+      this.hoursWorked = this.ALT_HOURS_WORKED;
+      return false;
+    }
+  } // end setHoursWorked
 
   /**
    * The setCompensation method checks the arguments for range and then sets the
@@ -60,7 +78,8 @@ public class HourlyEmployee extends Employee {
    */
   public String toString() {
     return this.name.toString() + " | " + this.address.toString() + " | " + this.date.toString()
-        + " | Payment Schedule: " + this.paymentSchedule + " | Hourly Rate: " + this.earnings + " | Hours Worked: " + this.hoursWorked + " | Compensation: " + this.compensation;
+        + " | Payment Schedule: " + this.paymentSchedule + " | Hourly Rate: " + this.earnings + " | Weekly Hours Worked: "
+        + this.hoursWorked + " | Weekly Compensation: " + this.compensation;
   } // end toString
 
 }
