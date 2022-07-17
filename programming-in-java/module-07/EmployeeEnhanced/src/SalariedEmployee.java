@@ -1,3 +1,12 @@
+/**
+ * This SalariedEmployee class contains the get/set, input checking, and formatting of an
+ * salary employee, an extension of the Employee class
+ *
+ * @author Justin Law
+ * @version 1.1
+ * class: EN.605.201.82.SU22
+ */
+
 public class SalariedEmployee extends Employee {
 
   public final int ALT_EARNINGS = 40000;
@@ -43,4 +52,4 @@ public class SalariedEmployee extends Employee {
         + " | Payment Schedule: " + this.paymentSchedule + " | Salary: " + this.earnings;
   } // end toString
 
-}
+} // end SalariedEmployee class

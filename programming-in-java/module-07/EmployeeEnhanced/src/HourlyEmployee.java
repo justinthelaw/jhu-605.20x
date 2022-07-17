@@ -1,3 +1,12 @@
+/**
+ * This HourlyEmployee class contains the get/set, input checking, and formatting of an
+ * hourly employee, an extension of the Employee class
+ *
+ * @author Justin Law
+ * @version 1.1
+ * class: EN.605.201.82.SU22
+ */
+
 public class HourlyEmployee extends Employee {
 
   public final int ALT_EARNINGS = 25;
@@ -82,4 +91,4 @@ public class HourlyEmployee extends Employee {
         + this.hoursWorked + " | Weekly Compensation: " + this.compensation;
   } // end toString
 
-}
+} //end HourlyEmployee class
