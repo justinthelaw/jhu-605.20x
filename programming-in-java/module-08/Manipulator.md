@@ -39,28 +39,28 @@ classDiagram
     }
 
     %% Interface classes
+    %% Drawing a XXXX
     class Drawable {
       <<interface>>
       +drawObject() void
-      %% Drawing a XXXX
     }
 
+    %% Rotating a XXXX
     class Rotatable {
       <<interface>>
       +rotateObject() void
-      %% Rotating a XXXX
     }
 
+    %% Resizing a XXXX
     class Resizable {
       <<interface>>
       +resizeObject() void
-      %% Resizing a XXXX
     }
 
+    %% XXXX sound
     class Sounds {
       <<interface>>
       +playSounds() void
-      %% XXXX sound
     }
 
     %% Object Classes
