@@ -34,7 +34,7 @@ classDiagram
     %% Superclass
     class Object {
       +name String
-      +getName() void
+      +getName() String
       +setName(name: String) void
     }
 
@@ -66,7 +66,7 @@ classDiagram
     %% Object Classes
     class Animal {
       +name String
-      +getName() void
+      +getName() String
       +setName(name: String) void
       +drawObject() void
       +rotateObject() void
@@ -77,9 +77,9 @@ classDiagram
     class Vehicle {
       +name String
       +age int
-      +getName() void
+      +getName() String
       +setName(name: String) void
-      +getAge() void
+      +getAge() int
       +setAge(age: int) void
       +drawObject() void
       +rotateObject() void
