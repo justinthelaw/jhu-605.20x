@@ -18,45 +18,69 @@ The UML diagram was built using [mermaid.js](https://mermaid-js.github.io/mermai
 ```mermaid
 classDiagram
 
+    Object "1" <|-- "*" Animal
+    Object "1" <|-- "*" Vehicle
+
+    Animal ..|> Drawable : implements >
+    Animal ..|> Rotatable : implements >
+    Animal ..|> Resizable : implements >
+    Animal ..|> Sounds : implements >
+
+    Vehicle ..|> Drawable : implements >
+    Vehicle ..|> Rotatable : implements >
+    Vehicle ..|> Resizable : implements >
+    Vehicle ..|> Sounds : implements >
+
+    %% Superclass
+    class Object {
+      +name String
+      +getName() void
+      +setName(name: String) void
+    }
+
     %% Interface classes
     class Drawable {
       <<interface>>
       +drawObject() void
+      %% Drawing a XXXX
     }
 
     class Rotatable {
       <<interface>>
       +rotateObject() void
+      %% Rotating a XXXX
     }
 
     class Resizable {
       <<interface>>
       +resizeObject() void
+      %% Resizing a XXXX
     }
 
     class Sounds {
       <<interface>>
       +playSounds() void
+      %% XXXX sound
     }
 
     %% Object Classes
     class Animal {
-      +String name
+      +name String
       +getName() void
-      +setName() void
+      +setName(name: String) void
       +drawObject() void
-      rotateObject() void
+      +rotateObject() void
       +resizeObject() void
       +playSounds() void
     }
 
     class Vehicle {
-      +String name
-      +int age
+      +name String
+      +age int
       +getName() void
-      +setName() void
+      +setName(name: String) void
       +getAge() void
-      +setAge() void
+      +setAge(age: int) void
       +drawObject() void
       +rotateObject() void
       +resizeObject() void
@@ -68,8 +92,9 @@ classDiagram
 ## Discussion
 
 - The presented problem is simple enough and is mostly explained by the UML diagram
+- A superclass named Object will be used to store Animals and Vehicles in an array before they are called polymorphically to perform their common methods
 - All interface classes will be used by the object classes, Animal and Vehicle, and the interface methods will be implemented
-- All object classes will contain their required attributesa nd getters/setters implemented
+- All object classes will contain their required attributes and getters/setters implemented
 
 # Implementation Code
 
