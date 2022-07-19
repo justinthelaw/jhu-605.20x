@@ -17,7 +17,14 @@ public class App {
     * @throws Exception
     */
    public static void main(String[] args) throws Exception {
-      System.out.println("Hello, World!");
+      Object[] objects = {new Animal("dog"), new Animal("cat"), new Vehicle("honda", 8), new Vehicle("toyota", 2)};
+
+      for (Object object : objects) {
+         object.drawObject();
+         object.resizeObject();
+         object.rotateObject();
+         object.playSounds();
+      }
    } // end main
 
 } // end App class

@@ -6,7 +6,7 @@
  * class: EN.605.201.82.SU22
  */
 
-public class Object {
+public abstract class Object {
 
    public String name;
 
@@ -27,5 +27,11 @@ public class Object {
    public String getName() {
       return this.name.length() > 0 ? this.name : "No Name";
    } // end getName
+
+   // pulls forward all interfaces to be implemented by subclasses
+   public abstract void resizeObject();
+   public abstract void drawObject();
+   public abstract void rotateObject();
+   public abstract void playSounds();
 
 } // end Object class

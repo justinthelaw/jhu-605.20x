@@ -21,15 +21,10 @@ classDiagram
     Object "1" <|-- "*" Animal
     Object "1" <|-- "*" Vehicle
 
-    Animal ..|> Drawable : implements >
-    Animal ..|> Rotatable : implements >
-    Animal ..|> Resizable : implements >
-    Animal ..|> Sounds : implements >
-
-    Vehicle ..|> Drawable : implements >
-    Vehicle ..|> Rotatable : implements >
-    Vehicle ..|> Resizable : implements >
-    Vehicle ..|> Sounds : implements >
+    Object ..|> Drawable : implements >
+    Object ..|> Rotatable : implements >
+    Object ..|> Resizable : implements >
+    Object ..|> Sounds : implements >
 
     %% Superclass
     class Object {
@@ -66,8 +61,6 @@ classDiagram
     %% Object Classes
     class Animal {
       +name String
-      +getName() String
-      +setName(name: String) void
       +drawObject() void
       +rotateObject() void
       +resizeObject() void
@@ -77,8 +70,6 @@ classDiagram
     class Vehicle {
       +name String
       +age int
-      +getName() String
-      +setName(name: String) void
       +getAge() int
       +setAge(age: int) void
       +drawObject() void
@@ -92,7 +83,8 @@ classDiagram
 ## Discussion
 
 - The presented problem is simple enough and is mostly explained by the UML diagram
-- A superclass named Object will be used to store Animals and Vehicles in an array before they are called polymorphically to perform their common methods
+- A superclass named Object will be used for containing commob implemented and abstract methods for Animals and Vehicles
+- An array of Object[] and a for-loop will be used to attain desired problem statement solution output
 - All interface classes will be used by the object classes, Animal and Vehicle, and the interface methods will be implemented
 - All object classes will contain their required attributes and getters/setters implemented
 
