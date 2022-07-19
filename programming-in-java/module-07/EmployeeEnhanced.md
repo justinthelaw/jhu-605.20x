@@ -38,10 +38,10 @@ classDiagram
 
     class Employee{
         <<abstract>>
-        +Name name
-        +Date date
-        +Address address
-        +String paymentSchedule
+        +name Name
+        +date Date
+        +address Address
+        +paymentSchedule String
         +setName(firstName: String, lastName: String) void
         +setAddress(street: String, city: String, state: String, zipCode: int) void
         +setDate(month: int, day: int, year: int) void
@@ -50,20 +50,20 @@ classDiagram
     }
 
     class Name{
-        +String firstName
-        +String lastName
+        +firstName String
+        +lastName String
         +setFirstName(firstName: String) Boolean
         +setLastName(lastName: String) Boolean
         +toString() String
     }
 
     class Date{
-      -int ALT_MONTH
-      -int ALT_DAY
-      -int ALT_YEAR
-      -int month
-      -int day
-      -int year
+      -ALT_MONTH int
+      -ALT_DAY int
+      -ALT_YEAR int
+      -month int
+      -day int
+      -year int
       +setMonth(month: int) Boolean
       +setDay(day: int) Boolean
       +setYear(year: int) Boolean
@@ -71,13 +71,13 @@ classDiagram
     }
 
     class Address{
-      -String ALT_STATE
-      -String ALT_STREET_CITY
-      -int ALT_ZIP_CODE
-      -String street
-      -String city
-      -String state
-      -int zipCode
+      -ALT_STATE String
+      -ALT_STREET_CITY String
+      -ALT_ZIP_CODE int
+      -street String
+      -city String
+      -state String
+      -zipCode int
       +setStreet(street: String) Boolean
       +setCity(city: String) Boolean
       +setState(state: String) Boolean
@@ -96,12 +96,12 @@ classDiagram
     }
 
     class HourlyEmployee{
-      -int ALT_EARNINGS
-      -int ALT_HOURS_WORKED
-      -float OVERTIME_RATE
-      -int earnings
-      -int hoursWorked
-      -float compensation
+      -ALT_EARNINGS int
+      -ALT_HOURS_WORKED int
+      -OVERTIME_RATE float
+      -earnings int
+      -hoursWorked int
+      -compensation float
       +setEarnings(earnings: int) Boolean
       +setHoursWorked(hoursWorked: int) Boolean
       +setCompensation(earnings: int, hoursWorked: int) void
